@@ -1,0 +1,27 @@
+name: Main workflow
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macOS-latest]
+        zen: [0.7.20191001+18c02166d]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Install asdf
+        run: git clone https://github.com/asdf-vm/asdf.git $HOME/asdf
+
+      - name: Install zen and run test
+        run: |
+          . $HOME/asdf/asdf.sh
+          asdf plugin-add zen $GITHUB_WORKSPACE
+          asdf install zen ${{ matrix.zen }}
+          asdf global zen ${{ matrix.zen }}
+          zen version
