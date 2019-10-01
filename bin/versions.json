@@ -1,0 +1,19 @@
+[
+  {
+    "release_name": "zen-0.7.20191001+18c02166d",
+    "binaries": [
+      {
+        "os": "macos",
+        "architecture": "x64",
+        "binary_link": "https://zen-lang.org/dist/0.7.20191001/zen-macos-x86_64-0.7.20191001+18c02166d.tar.xz",
+        "checksum": "402a75ba00e6b08cef930c9bba7eb958d6fcacfd867cd2dbc44399f88abcad8b"
+      },
+      {
+        "os": "linux",
+        "architecture": "x64",
+        "binary_link": "https://zen-lang.org/dist/0.7.20191001/zen-linux-x86_64-0.7.20191001+18c02166d.tar.xz",
+        "checksum": "0adb0a907cd96fb45a11941262a889124a15f60f8ba654f732ab06296cf4f2ef"
+      }
+    ]
+  }
+]
