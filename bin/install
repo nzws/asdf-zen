@@ -46,20 +46,7 @@ function install_zen() {
     curl --silent --location --create-dirs --output "${install_path}/zen.tar.xz" "$download_url" || fail "Could not download Zen $version"
     tar xf "${install_path}/zen.tar.xz" -C "${install_path}/bin" --strip-components=1 >/dev/null || fail "Could not uncompress"
     rm "${install_path}/zen.tar.xz"
-
-    echo
-    echo "=================================================="
-    echo "Zen $version has been installed!"
-    echo "--------------------------------------------------"
-    echo "Activate globally with:"
-    echo
-    echo "$ asdf global zen $version"
-    echo "--------------------------------------------------"
-    echo "Activate locally in the current folder with:"
-    echo
-    echo "$ asdf local zen $version"
-    echo "=================================================="
-    echo
+    echo "The installation was successful!"
   ) || (
     rm -rf "$install_path"
     fail "An error occurred"
