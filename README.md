@@ -1,6 +1,6 @@
 <div align="center">
 <h1>asdf-zen 📦</h1>
-Zen plugin for ASDF version manager
+Zen plugin for asdf version manager
 </div>
 <hr />
 
