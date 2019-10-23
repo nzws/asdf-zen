@@ -27,25 +27,32 @@ function install_zen() {
   local version=$2
   local install_path=$3
 
-  local plugin_home=$(dirname $(dirname "${0}"))
-  local platform
-
-  if [[ "$OSTYPE" == "darwin"* ]]; then
-    platform="0"
-  elif [[ "$OSTYPE" == "linux"* ]]; then
-    platform="1"
-  else
-    fail "Unsupported platform..."
+  if [ "$install_type" != "version" ]; then
+    fail "asdf-zen supports release installs only."
   fi
 
-  local download_url=$(cat "${plugin_home}/bin/versions.json" | jq -r ".[].binaries[${platform}].binary_link")
+  local plugin_home
+  plugin_home=$(dirname "$(dirname "${0}")")
+
+  local platform
+
+  case "$OSTYPE" in
+    darwin*) platform="0" ;;
+    linux*) platform="1" ;;
+    *) fail "Unsupported platform" ;;
+  esac
+
+  local download_url
+  download_url=$(jq -r ".[].binaries[${platform}].binary_link" <"${plugin_home}/bin/versions.json" | grep "$version")
+  local source_path="${install_path}/zen.tar.xz"
+  local distination_path="${install_path}/bin"
 
   (
     echo "∗ Downloading and installing zen..."
-    mkdir -p "${install_path}/bin"
-    curl --silent --location --create-dirs --output "${install_path}/zen.tar.xz" "$download_url" || fail "Could not download Zen $version"
-    tar xf "${install_path}/zen.tar.xz" -C "${install_path}/bin" --strip-components=1 >/dev/null || fail "Could not uncompress"
-    rm "${install_path}/zen.tar.xz"
+    mkdir -p "$distination_path"
+    curl --silent --location --create-dirs --output "$source_path" "$download_url" || fail "Could not download"
+    tar xf "$source_path" -C "$distination_path" --strip-components=1 >/dev/null || fail "Could not uncompress"
+    rm "$source_path"
     echo "The installation was successful!"
   ) || (
     rm -rf "$install_path"
