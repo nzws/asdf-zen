@@ -25,3 +25,10 @@ jobs:
           asdf install zen ${{ matrix.zen }}
           asdf global zen ${{ matrix.zen }}
           zen version
+
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Run ShellCheck
+        run: shellcheck bin/*
