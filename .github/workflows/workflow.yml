@@ -31,4 +31,4 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Run ShellCheck
-        run: shellcheck bin/*
+        run: shellcheck bin/install bin/list-all
