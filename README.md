@@ -1,5 +1,5 @@
 <div align="center">
-<h1>asdf-zen 📦</h1>
+<h1>asdf-zen</h1>
 <span><a href="https://zen-lang.org">Zen</a> plugin for asdf version manager</span>
 </div>
 <hr />
