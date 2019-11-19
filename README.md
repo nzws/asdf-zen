@@ -37,7 +37,7 @@ Thanks goes to these wonderful people
 <!-- prettier-ignore -->
 <table>
   <tr>
-    <td align="center"><a href="https://bsky.moe"><img src="https://avatars3.githubusercontent.com/u/38746192?v=4" width="100px;" alt="BSKY"/><br /><sub><b>BSKY</b></sub></a><br /><a href="https://github.com/asdf-community/asdf-zen/commits?author=imbsky" title="Code">💻</a> <a href="https://github.com/asdf-community/asdf-zen/commits?author=imbsky" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://bsky.moe"><img src="https://avatars3.githubusercontent.com/u/38746192?v=4" width="100px;" alt="BSKY"/><br /><sub><b>BSKY</b></sub></a><br /><a href="https://github.com/asdf-community/asdf-zen/commits?author=imbsky" title="Code">💻</a> <a href="https://github.com/asdf-community/asdf-zen/commits?author=imbsky" title="Documentation">📖</a> <a href="#maintenance-imbsky" title="Maintenance">🚧</a></td>
   </tr>
 </table>
 
