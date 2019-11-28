@@ -15,5 +15,22 @@
         "checksum": "0adb0a907cd96fb45a11941262a889124a15f60f8ba654f732ab06296cf4f2ef"
       }
     ]
+  },
+  {
+    "release_name": "zen-0.8.20191124+552247019",
+    "binaries": [
+      {
+        "os": "macos",
+        "architecture": "x64",
+        "binary_link": "https://zen-lang.org/dist/0.8.20191124/zen-macos-x86_64-0.8.20191124+552247019.tar.xz",
+        "checksum": "23cfb3f35f2405eebcaad17b3d90c7af4aca956bfdf64a22ac16bb7feae6fbd4"
+      },
+      {
+        "os": "linux",
+        "architecture": "x64",
+        "binary_link": "https://zen-lang.org/dist/0.8.20191124/zen-linux-x86_64-0.8.20191124+552247019.tar.xz",
+        "checksum": "3d9177b8006e6134f2770a562805fbaccbb46bb53b4658d1373e240ec5cf6fcb"
+      }
+    ]
   }
 ]
